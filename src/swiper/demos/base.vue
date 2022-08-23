@@ -5,18 +5,21 @@
     :navigation="{ type: 'dots', showSlideBtn: false }"
     @change="handleChange"
   >
-    <t-swiper-item class="swiper-item--demo">
+    <t-swiper-item class="swiper-item--demo" @click="handleClick">
       <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
     </t-swiper-item>
-    <t-swiper-item class="swiper-item--demo">
+    <t-swiper-item class="swiper-item--demo" @click="handleClick">
       <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
     </t-swiper-item>
-    <t-swiper-item class="swiper-item--demo">
+    <t-swiper-item class="swiper-item--demo" @click="handleClick">
       <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
     </t-swiper-item>
   </t-swiper>
 </template>
 <script lang="ts" setup>
+const handleClick = () => {
+  console.log(11)
+}
 const handleChange = (index: number) => {
   console.log('基础示例,页数变化到》》》', index);
 };
